@@ -1,0 +1,104 @@
+{
+  "Config": {
+    "Columbus Life": {
+      "LivingBenefitOptionAdjustRatio": 0,
+      "AccidentalRiderAdjustRatio": 0.98,
+      "ChronicleIllnessAdjustRatio": 0.98,
+      "CriticalIllnessAdjustRatio": 0.98,
+      "TerminalIllnessAdjustRatio": 0.98,
+      "ChildrenRiderAdjustRatio": 0.98,
+      "PremiumConfigs": [
+        {
+          "Gender": "Male",
+          "Term": "10",
+          "Class": "Standard",
+          "Source": "test_cl_m_10.csv"
+        },
+        {
+          "Gender": "Male",
+          "Term": "20",
+          "Class": "Standard",
+          "Source": "test_cl_m_20.csv"
+        },
+        {
+          "Gender": "Female",
+          "Term": "10",
+          "Class": "Standard",
+          "Source": "test_cl_f_10.csv"
+        },
+        {
+          "Gender": "Female",
+          "Term": "20",
+          "Class": "Standard",
+          "Source": "test_cl_f_20.csv"
+        }
+      ]
+    },
+    "Nationwide": {
+      "LivingBenefitOptionAdjustRatio": 0.9,
+      "AccidentalRiderAdjustRatio": 0.98,
+      "ChronicleIllnessAdjustRatio": 0.98,
+      "CriticalIllnessAdjustRatio": 0.98,
+      "TerminalIllnessAdjustRatio": 0,
+      "ChildrenRiderAdjustRatio": 0,
+      "PremiumConfigs": [
+        {
+          "Gender": "Male",
+          "Term": "10",
+          "Class": "Standard",
+          "Source": "test_nw_m_10.csv"
+        },
+        {
+          "Gender": "Male",
+          "Term": "15",
+          "Class": "Standard",
+          "Source": "test_nw_m_15.csv"
+        },
+        {
+          "Gender": "Female",
+          "Term": "10",
+          "Class": "Standard",
+          "Source": "test_nw_f_10.csv"
+        },
+        {
+          "Gender": "Female",
+          "Term": "15",
+          "Class": "Standard",
+          "Source": "test_nw_f_15.csv"
+        }
+      ]
+    },
+    "AIG": {
+      "LivingBenefitOptionAdjustRatio": 0.9,
+      "AccidentalRiderAdjustRatio": 0,
+      "ChronicleIllnessAdjustRatio": 0.98,
+      "CriticalIllnessAdjustRatio": 0.98,
+      "TerminalIllnessAdjustRatio": 0.8,
+      "ChildrenRiderAdjustRatio": 0,
+      "PremiumConfigs": [
+        {
+          "Gender": "Male",
+          "Term": "10",
+          "Class": "Standard",
+          "Source": "test_aig_m_10.csv"
+        }
+      ]
+    },
+    "New York Life": {
+      "LivingBenefitOptionAdjustRatio": 0.9,
+      "AccidentalRiderAdjustRatio": 0.98,
+      "ChronicleIllnessAdjustRatio": 0.98,
+      "CriticalIllnessAdjustRatio": 0.98,
+      "TerminalIllnessAdjustRatio": 0.98,
+      "ChildrenRiderAdjustRatio": 0.8,
+      "PremiumConfigs": [
+        {
+          "Gender": "Male",
+          "Term": "10",
+          "Class": "Standard",
+          "Source": "test_nyl_m_10.csv"
+        }
+      ]
+    }
+  }
+}
