@@ -37,6 +37,11 @@ The request object should be initialized with XML file. The XML file contains th
 processRequest() returns a list of QuoteResult. It contains up to 3 results. Each result has insurer name and premium value. According to the insurer name, the front end could display more description about the insurer.
 It is possible the quote result return empty list. For example if the insured has military service or high risk activity, we don't return result and the UI needs to let applicant contact FinMind.
 
+
+getCoverageAmountList() return a list of valid coverage amounts. The front end needs to let customer select from this list.
+
+getCoverageTimeList(int age) return a list of coverage time with given age. Currently, we make an assumption that the valid coverage time list for a given age is same across all insurers. The function could return null if age is out of valid range.
+
 ## License
 
 

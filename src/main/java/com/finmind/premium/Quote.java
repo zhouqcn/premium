@@ -9,6 +9,8 @@ public class Quote {
     final private int MAX_NUM_RESULTS = 3;
     private HashMap<InsurerName, InsurerInfo> insurerInfoMap = new HashMap<>();
 
+    final private List<Long> COVERAGE_AMOUNT_LIST = Arrays.asList(150000L, 200000L,	250000L, 300000L, 350000L, 400000L,	450000L, 500000L, 600000L, 700000L, 750000L, 800000L, 900000L, 1000000L, 1100000L, 1200000L, 1250000L, 1500000L, 1750000L, 2000000L, 2500000L, 2750000L, 3000000L, 3500000L, 4000000L, 4500000L, 5000000L, 6000000L, 7000000L, 8000000L, 9000000L, 10000000L, 11000000L, 12000000L, 12500000L, 15000000L, 20000000L);
+
     public Quote() {
     }
 
@@ -307,5 +309,25 @@ public class Quote {
         }
 
         return results;
+    }
+
+    public List<Long> getCoverageAmountList() {
+        // Return a list of valid coverage amounts. The front end needs to let customer select from this list.
+        return COVERAGE_AMOUNT_LIST;
+    }
+
+    public List<Integer> getCoverageTimeList(int age) {
+        // Return a list of coverage time with given age. Currently we make assumption that the valid coverage time list for a given age is same across all insurers.
+        if (age >= 20 && age <= 50) {
+            return Arrays.asList(10, 15, 20, 30);
+        } else if (age >= 51 && age <= 65) {
+            return Arrays.asList(10, 15, 20);
+        } else if (age >= 66 && age <= 70) {
+            return Arrays.asList(10, 15);
+        } else if (age >= 71 && age <= 75) {
+            return Arrays.asList(10);
+        }
+
+        return null;
     }
 }
