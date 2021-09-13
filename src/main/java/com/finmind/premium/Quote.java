@@ -297,6 +297,12 @@ public class Quote {
         Collections.sort(quoteResults, (a, b) -> { return a.getPremium() > b.getPremium() ? 1: -1; });
         int number_to_fill = MAX_NUM_RESULTS - results.size();
         for (int i = 0; i < number_to_fill; i++) {
+            // Add the first element and remove the element from quoteResult after adding.
+            results.add(quoteResults.remove(0));
+        }
+
+        // Now results contains MAX_NUM_RESULTS elements. Now add anything left in quoteResults to tail of results.
+        for (int i = 0; i < quoteResults.size(); i++) {
             results.add(quoteResults.get(i));
         }
 

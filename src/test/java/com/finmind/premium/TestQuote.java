@@ -156,10 +156,11 @@ public class TestQuote {
     public void testProcessRequest() throws Exception {
         List<QuoteResult> results = testQuote.processRequest(testRequest);
         Collections.sort(results, (a, b) -> { return a.getPremium() > b.getPremium() ? 1 : -1; });
-        assertEquals(results.size(), 3);
+        assertEquals(results.size(), 4);
         assertEquals(results.get(0).getInsurer(), InsurerName.AIG);
         assertEquals(results.get(1).getInsurer(), InsurerName.NEW_YORK_LIFE);
         assertEquals(results.get(2).getInsurer(), InsurerName.COLUMBUS_LIFE);
+        assertEquals(results.get(3).getInsurer(), InsurerName.NATIONWIDE);
     }
 
 }
